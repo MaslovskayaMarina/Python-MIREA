@@ -17,7 +17,6 @@ def script(check, x, y):
 		return 'up'
 	if check('level', x, y) == 3 or check('level', x, y) == 4: #Уровень 3, 4
 		if check('level', x, y) == 4:
-			print (x, y)
 			if x == 4 and y == 14 and check('gold', 8, 16):
 				return 'right'
 			if x == 4 and y == 10:
