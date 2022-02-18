@@ -19,6 +19,8 @@ def script(check, x, y):
 		if check('level', x, y) == 4:
 			if x == 4 and y == 14 and check('gold', 8, 16):
 				return 'right'
+			if x == 5 and y == 14 and check('gold', 8, 16) == 0:
+				return 'left'
 			if x == 4 and y == 10:
 				return 'right'
 		if check('wall', x, y + 1) and check('wall', x - 1, y):
