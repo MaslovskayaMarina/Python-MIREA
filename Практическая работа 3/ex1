@@ -1,0 +1,54 @@
+import math
+# Вариант 1
+
+# Упражнение 1
+
+# whitespace before '('
+def ex1_1(y):
+    if y < 152:
+        return 19 + 71 * (math.atan (57 * y + 1 + 14 * y ** 2)) ** 7  # Перед (57 пробел
+
+ex1_1(1)
+
+# missing whitespace around operator
+def ex1_2(y):
+    if y < 152:
+        return 19 + 71 * (math.atan(57* y + 1 + 14 * y ** 2)) ** 7  # После 57 сразу *
+
+ex1_2(4)
+
+# missing whitespace after ','
+def ex1_3(x, y):
+    res1 = 0
+    return (res1)
+
+ex1_3(6,8) # Ошибка 6,8
+
+# unexpected spaces around keyword / parameter equals
+def ex1_4(x= '1', y='2'):  # Перед '1' лишний пробел
+    return x
+
+ex1_4('a', 'b')
+
+# expected 2 blank lines, found 1
+import sys  # После import должны быть 2 пустые строки
+
+def ex1_5(x='1', y='2'):  # Перед '1' лишний пробел
+    return x
+
+ex1_5('a', 'b')
+x = 0
+
+# multiple statements on one line (colon)
+if x > 5: y = 10  # y = 10 должно быть написано на новой строке
+
+# multiple statements on one line (semicolon)
+x = 5; y = 10  # y = 10 должно быть написано с новой строки. после x = 5 не должно быть ';'
+
+# comparison to None should be 'if cond is None:'
+if x == None:  # Сравнение с None лучше выполнять с помощью is / is not None
+    print("Do something")
+
+# comparison to True should be 'if cond is True:' or 'if cond:'
+if y == True:  # Необходимо написать if y is True: или просто if y:
+    print('a')
