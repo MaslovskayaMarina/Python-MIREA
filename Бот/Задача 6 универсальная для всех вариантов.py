@@ -49,7 +49,7 @@ def run(tree, key, current):
 
 
 def main(path):
-    z = math.factorial(len(path))
+    z = math.factorial(len(set(path)))
     truepath = []
     while len(truepath) != z:
         tr = copy.copy(path)
